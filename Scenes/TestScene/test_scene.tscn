@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj8fc7f0811qi"]
+[gd_scene load_steps=6 format=3 uid="uid://bj8fc7f0811qi"]
+
+[ext_resource type="Script" path="res://Scripts/CharacterController/CharacterController.gd" id="1_io8ae"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvuh"]
 size = Vector2(47, 79)
@@ -13,7 +15,9 @@ size = Vector2(1150, 53)
 [node name="TestScene" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+process_mode = 3
 position = Vector2(252, 302)
+script = ExtResource("1_io8ae")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_vpvuh")
